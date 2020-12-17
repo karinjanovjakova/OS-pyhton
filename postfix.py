@@ -20,7 +20,7 @@ def eval_expr (string, d={}):
             elif i=="-":
                 b=prve - druhe
         zoz.append(b)
-    print(zoz[0])
+    return(zoz[0])
     
     
 def znamienko (char):
@@ -47,7 +47,7 @@ def to_infix (string):
             s+=druhe
             s+=" )"
             zoz.append(s)
-    print (zoz[0])
+    return (zoz[0])
 
 def to_postfix (string):
     zoz=[]
@@ -56,7 +56,7 @@ def to_postfix (string):
     for i in z:
         if znamienko(i)==1:
             zoz.append(i)                   #zisti, ci ide o znamienko alebo "(" a prida do zoznamu znamienok
-            #print(zoz)                      # kontrola zoznamu, podla vsetkeho don zapisuje spravne ale pri while sa tvari ako prazdny 
+            #return(zoz)                      # kontrola zoznamu, podla vsetkeho don zapisuje spravne ale pri while sa tvari ako prazdny 
         else:
             if i==")":
                 while zoz[-1] != "(":
@@ -66,6 +66,6 @@ def to_postfix (string):
             else:
                 postfix+=i                  #zapisuje cisla (a premenne)
                 postfix+=" "
-    print(postfix)
+    return(postfix)
             
         
